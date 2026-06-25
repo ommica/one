@@ -1,1 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <title>Jstore · Reseller Directory</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* === REDESIGN 2025 — PREMIUM, DINAMIK, TIDAK BOSAN === */
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+    
+    body {
+      background: #0b0c0e;
+      font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 1.5rem;
+      margin: 0;
+      position: relative;
+      overflow-x: hidden;
+    }
 
+    /* === DYNAMIC GRID BACKGROUND === */
+    .grid-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: 
+        linear-gradient(rgba(236, 72, 153, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(236, 72, 153, 0.03) 1px, transparent 1px);
+      background-size: 50px 50px;
+      z-index: 0;
+      animation: gridMove 20s linear infinite;
+    }
+
+    @keyframes gridMove {
+      0% { transform: translate(0, 0); }
+      100% { transform: translate(50px, 50px); }
+    }
+
+    /* === GLOWING ORBS === */
+    .orb {
+      position: fixed;
+      border-radius: 50%;
+      filter: blur(100px);
+      z-index: 0;
+      animation: orbPulse 15s infinite alternate;
+    }
+
+    .orb-1 {
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle at center, rgba(236, 72, 153, 0.15), transparent 80%);
+      top: -200px;
+      left: -200px;
+    }
+
+    .orb-2 {
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle at center, rgba(139, 92, 246, 0.12), transparent 80%);
+      bottom: -300px;
+      right: -200px;
+      animation-delay: 2s;
+    }
+
+    .orb-3 {
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle at center, rgba(6, 182, 212, 0.1), transparent 80%);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      animation-delay: 4s;
+    }
+
+    @keyframes orbPulse {
+      0% { opacity: 0.3; transform: scale(1); }
+      100% { opacity: 0.6; transform: scale(1.2); }
+    }
+
+    /* === MAIN CARD — DEEP GLASS === */
+    .card-premium {
+      max-width: 700px;
+      width: 100%;
+      background: rgba(10, 12, 18, 0.75);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 48px;
+      box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(236, 72, 153, 0.1);
+      padding: 2.5rem 2.2rem;
+      position: relative;
+      z-index: 20;
+    }
+
+    /* === HEADER WITH DYNAMIC BADGE === */
+    .header-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 2rem;
+    }
+
+    .brand-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(236, 72, 153, 0.1);
+      border: 1px solid rgba(236, 72, 153, 0.2);
+      padding: 0.5rem 1.2rem;
+      border-radius: 100px;
+      color: #f9a8d4;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      backdrop-filter: blur(4px);
+    }
+
+    .brand-badge i {
+      color: #ec4899;
+    }
+
+    .glowing-icon {
+      width: 56px;
+      height: 56px;
+      background: linear-gradient(145deg, rgba(236, 72, 153, 0.15), rgba(139, 92, 246, 0.15));
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(236, 72, 153, 0.3);
+      box-shadow: 0 10px 20px -5px rgba(236, 72, 153, 0.2);
+    }
+
+    .glowing-icon i {
+      font-size: 1.8rem;
+      color: #ec4899;
+      filter: drop-shadow(0 0 10px rgba(236, 72, 153, 0.5));
+    }
+
+    /* === TITLE WITH ANIMATED UNDERLINE === */
+    .title-wrapper {
+      margin-bottom: 2.2rem;
+    }
+
+    h1 {
+      font-size: 3.2rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1;
+      color: white;
+      margin-bottom: 0.75rem;
+    }
+
+    .title-accent {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .accent-line {
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(90deg, #ec4899, #a855f7);
+      border-radius: 4px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .accent-line::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+      animation: shimmer 2s infinite;
+    }
+
+    @keyframes shimmer {
+      100% { left: 100%; }
+    }
+
+    .verified-tag {
+      color: #94a3b8;
+      font-size: 0.9rem;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .verified-tag i {
+      color: #10b981;
+    }
+
+    /* === RESELLER LIST — ELEVATED === */
+    .list-container {
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+      margin: 2rem 0 2.2rem;
+    }
+
+    .reseller-entry {
+      display: flex;
+      align-items: center;
+      padding: 0.9rem 1.2rem;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 24px;
+      transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+      text-decoration: none;
+      position: relative;
+      backdrop-filter: blur(8px);
+      cursor: pointer;
+    }
+
+    .reseller-entry:hover {
+      background: rgba(236, 72, 153, 0.1);
+      border-color: rgba(236, 72, 153, 0.3);
+      transform: translateX(8px) scale(1.01);
+      box-shadow: 0 10px 25px -10px rgba(236, 72, 153, 0.3);
+    }
+
+    /* entry icon — more dynamic */
+    .entry-icon {
+      width: 48px;
+      height: 48px;
+      background: linear-gradient(145deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+      border-radius: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 1.2rem;
+      color: #ec4899;
+      font-size: 1.2rem;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: all 0.3s;
+    }
+
+    .reseller-entry:hover .entry-icon {
+      background: linear-gradient(145deg, rgba(236, 72, 153, 0.2), rgba(236, 72, 153, 0.05));
+      border-color: rgba(236, 72, 153, 0.4);
+      transform: scale(1.05);
+    }
+
+    .entry-number {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: white;
+      letter-spacing: -0.01em;
+      transition: all 0.2s;
+    }
+
+    .reseller-entry:hover .entry-number {
+      color: #f9a8d4;
+    }
+
+    /* pulse dot — subtle indicator */
+    .pulse-dot {
+      width: 8px;
+      height: 8px;
+      background: #10b981;
+      border-radius: 50%;
+      margin-left: auto;
+      position: relative;
+      box-shadow: 0 0 0 rgba(16, 185, 129, 0.4);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4); }
+      70% { box-shadow: 0 0 0 8px rgba(16, 185, 129, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+    }
+
+    /* === FOOTER — CLEAN & PREMIUM === */
+    .footer-premium {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 1.8rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .copyright {
+      color: #6b7280;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 0.8rem;
+    }
+
+    .social-link {
+      width: 42px;
+      height: 42px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #94a3b8;
+      transition: all 0.2s;
+      font-size: 1.1rem;
+      text-decoration: none;
+    }
+
+    .social-link:hover {
+      background: rgba(236, 72, 153, 0.15);
+      border-color: rgba(236, 72, 153, 0.4);
+      color: #ec4899;
+      transform: translateY(-3px);
+    }
+
+    /* === RESPONSIVE === */
+    @media (max-width: 550px) {
+      body { padding: 1rem; }
+      .card-premium { padding: 1.8rem 1.2rem; }
+      h1 { font-size: 2.4rem; }
+      .entry-number { font-size: 1.1rem; }
+      .entry-icon { width: 44px; height: 44px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- DYNAMIC BACKGROUND -->
+  <div class="grid-bg"></div>
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+
+  <!-- PREMIUM CARD -->
+  <div class="card-premium">
+
+    <!-- HEADER — dynamic badge + icon -->
+    <div class="header-section">
+      <div class="brand-badge">
+        <i class="fas fa-bolt"></i>
+        AUTHORISED SELLER
+      </div>
+      <div class="glowing-icon">
+        <i class="fas fa-store"></i>
+      </div>
+    </div>
+
+    <!-- TITLE — with animated accent line -->
+    <div class="title-wrapper">
+      <h1>Jstore<br>Reseller</h1>
+      <div class="title-accent">
+        <div class="accent-line"></div>
+        <span class="verified-tag">
+          <i class="fas fa-check-circle"></i> Verified Network
+        </span>
+      </div>
+    </div>
+
+    <!-- RESELLER DIRECTORY — clean numbers with pulse indicator -->
+    <div class="list-container">
+      
+      <div class="reseller-entry" onclick="return false;">
+        <span class="entry-icon"><i class="fas fa-phone-alt"></i></span>
+        <span class="entry-number">011-2930 9383</span>
+        <span class="pulse-dot"></span>
+      </div>
+
+      <div class="reseller-entry" onclick="return false;">
+        <span class="entry-icon"><i class="fas fa-phone-alt"></i></span>
+        <span class="entry-number">018-265 1427</span>
+        <span class="pulse-dot"></span>
+      </div>
+
+      <div class="reseller-entry" onclick="return false;">
+        <span class="entry-icon"><i class="fas fa-phone-alt"></i></span>
+        <span class="entry-number">017-718 5578</span>
+        <span class="pulse-dot"></span>
+      </div>
+
+      <div class="reseller-entry" onclick="return false;">
+        <span class="entry-icon"><i class="fas fa-phone-alt"></i></span>
+        <span class="entry-number">011-5510 2278</span>
+        <span class="pulse-dot"></span>
+      </div>
+
+      <div class="reseller-entry" onclick="return false;">
+        <span class="entry-icon"><i class="fas fa-phone-alt"></i></span>
+        <span class="entry-number">018-966 8011</span>
+        <span class="pulse-dot"></span>
+      </div>
+
+      <div class="reseller-entry" onclick="return false;">
+        <span class="entry-icon"><i class="fas fa-phone-alt"></i></span>
+        <span class="entry-number">014-303 5717</span>
+        <span class="pulse-dot"></span>
+      </div>
+
+      <div class="reseller-entry" onclick="return false;">
+        <span class="entry-icon"><i class="fas fa-phone-alt"></i></span>
+        <span class="entry-number">010-393 6293</span>
+        <span class="pulse-dot"></span>
+      </div>
+
+      <div class="reseller-entry" onclick="return false;">
+        <span class="entry-icon"><i class="fas fa-phone-alt"></i></span>
+        <span class="entry-number">011-1066 2672</span>
+        <span class="pulse-dot"></span>
+      </div>
+
+    </div>
+
+    <!-- FOOTER — WhatsApp & Telegram only -->
+    <div class="footer-premium">
+      <span class="copyright">© 2025 Jstore Network</span>
+      <div class="social-links">
+        <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+        <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
