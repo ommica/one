@@ -1,10 +1,1 @@
-#EXTM3U
 
-#EXTINF:-1 group-logo="https://iili.io/fUx7fdG.png" tvg-name="AKSES DITOLAK" group-title="AKSES DITOLAK" tvg-logo="https://iili.io/fUx7fdG.png",AKSES DITOLAK
-http://0.0.0.0/blocked
-
-#EXTINF:-1 group-logo="https://iili.io/fUx7fdG.png" tvg-name="SILA HUBUNGI ADMIN" group-title="SILA HUBUNGI ADMIN️" tvg-logo="https://iili.io/fUx7fdG.png",SILA HUBUNGI ADMIN
-http://0.0.0.0/contact_admin
-
-#EXTINF:-1 group-logo="https://iili.io/fUx7fdG.png" tvg-name="JANGAN LANGGAR RULES!!" group-title="JANGAN LANGGAR RULES!!" tvg-logo="https://iili.io/fUx7fdG.png",JANGAN LANGGAR RULES!!
-http://0.0.0.0/contact_admin
