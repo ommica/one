@@ -38,7 +38,7 @@ https://i.ibb.co/dBpcjkB/IMG-6206.jpg
 
 
 ##404
-#EXTINF:-1 group-logo="https://iili.io/3O8mkdv.jpg" tvg-id="BOO" tvg-name="BOO" tvg-logo="https://i.ibb.co/hF69DQJq/Astro-Boo-2024.png" group-title="HOT CHANNEL" ch-number="404",404 Boo HD (Not 24H)
+#EXTINF:-1 group-logo="https://iili.io/3O8mkdv.jpg" tvg-id="BOO" tvg-name="BOO" tvg-logo="https://i.ibb.co/hF69DQJq/Astro-Boo-2024.png" group-title="MALAYSIA" ch-number="404",404 Boo HD (Not 24H)
 #KODIPROP:inputstreamaddon=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=dash
 #KODIPROP:inputstream.adaptive.license_type=clearkey
@@ -48,7 +48,7 @@ https://linears2-playback.astro.com.my/vsg/41MsN2B-QgN7WFieZPgrzOEwCVrBt8Ig45keU
 
 
 ##611
-#EXTINF:-1 group-logo="https://iili.io/3O8mkdv.jpg" tvg-id="AstroCeria" tvg-name="CERIA HD" group-title="HOT CHANNEL" tvg-logo="https://i.ibb.co/ycDN5VtK/Astro-Ceria-2024.png" ch-number="611",611 Ceria HD (Not 24H)
+#EXTINF:-1 group-logo="https://iili.io/3O8mkdv.jpg" tvg-id="AstroCeria" tvg-name="CERIA HD" group-title="KIDS TV" tvg-logo="https://i.ibb.co/ycDN5VtK/Astro-Ceria-2024.png" ch-number="611",611 Ceria HD (Not 24H)
 #KODIPROP:inputstreamaddon=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=dash
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
@@ -58,7 +58,7 @@ https://linears2-playback.astro.com.my/vsg/41GjHOWBIdawpxAHV4IXdhME97qkwAt1I__XZ
 
 
 ##308
-#EXTINF:-1 group-logo="https://iili.io/3O8mkdv.jpg" ch-number="308" tvg-id="AstroQJ" group-title="Chinese" tvg-logo="https://i.ibb.co/8DxMBZqG/astro-qj-logo-2023-present-by-astrologo2003-dgl7f1v-fullview.jpg",308 QJ HD (Not 24H)
+#EXTINF:-1 group-logo="https://iili.io/3O8mkdv.jpg" ch-number="308" tvg-id="AstroQJ" group-title="CHINESE" tvg-logo="https://i.ibb.co/8DxMBZqG/astro-qj-logo-2023-present-by-astrologo2003-dgl7f1v-fullview.jpg",308 QJ HD (Not 24H)
 #KODIPROP:inputstreamaddon=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=dash
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
@@ -67,7 +67,7 @@ https://linears2-playback.astro.com.my/vsg/41GjHOWBIdawpxAHV4IXdhME97qkwAt1I__XZ
 https://linears2-playback.astro.com.my/vsg/41lbFb82zZ8ewOFVgJ1BMkeQY3_B0yFgrp_a-oNWpJMRI=8TQA/dash-wv/jitp-linearwm/2507/default_ott.mpd
 
 ##306
-#EXTINF:-1 group-logo="https://iili.io/3O8mkdv.jpg" tvg-id="306.astro" tvg-logo="https://i.ibb.co/spkP9RTz/Astro-AEC-2024.png" group-title="Chinese" ch-number="306",306 AEC HD (Not 24H)
+#EXTINF:-1 group-logo="https://iili.io/3O8mkdv.jpg" tvg-id="306.astro" tvg-logo="https://i.ibb.co/spkP9RTz/Astro-AEC-2024.png" group-title="CHINESE" ch-number="306",306 AEC HD (Not 24H)
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=06282157da4e8f97623a70ed017fad10:8da72ca8501a4deb4bfc381fe1737ef4
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 14; SIMPLE Build/UKQ1.240805.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/134.0.6950.85 Mobile Safari/537.36
